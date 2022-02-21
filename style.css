@@ -87,34 +87,132 @@ header {
   margin: auto;
   margin-top: 10px;
   width: 70%;
-  padding: 10px;
-  border: 2px solid black;
+  padding: 0px 10px;
+  border: 1.5px solid black;
   border-radius: 5px;
 }
 .mainScreen .notes_container .note {
   display: flex;
-  /* border: 2px solid black; */
 }
 .mainScreen .notes_container .note .right_side {
-  display: flex;
-  padding: 10px;
+  display: block;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.mainScreen .notes_container .note .right_side p {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 10px;
-  color: red;
-}
-.mainScreen .notes_container .note .left_side {
-  border: 1px solid black;
-  display: flex;
-  font-size: 28px;
-  padding: 10px;
   justify-content: center;
   align-items: center;
+}
+.mainScreen .notes_container .note .right_side .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainScreen .notes_container .note .right_side .title .icon_side .checkIcon,
+.mainScreen .notes_container .note .right_side .title .icon_side .deleteIcon {
+  font-size: 24px;
+  margin: 5px;
+  padding: 8px 10px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  /* color: black; */
+  transition: all 0.5s ease;
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .checkIcon:hover {
+  color: #439093;
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .deleteIcon:hover {
+  color: #fa5849;
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .checkIcon::after,
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .checkIcon::before {
+  border: 1px solid black;
+  content: "";
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .deleteIcon::after,
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .deleteIcon::before {
+  border: 1px solid black;
+  content: "";
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .checkIcon:hover::after {
+  transform: translate(-2px, -2px);
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .checkIcon:hover::before {
+  transform: translate(2px, 2px);
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .deleteIcon:hover::after {
+  transform: translate(-2px, -2px);
+}
+.mainScreen
+  .notes_container
+  .note
+  .right_side
+  .title
+  .icon_side
+  .deleteIcon:hover::before {
+  transform: translate(2px, 2px);
 }
