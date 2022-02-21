@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Rubik:wght@400;500;600;700&display=swap");
+:root {
+  --primary: #323335;
+  --secondary: rgb(230, 230, 230);
+  --thridy: black;
+  /* #ebd6d7 */
+  /* #439093 */
+  /* #f09b93 */
+  /* #f9ebd9 */
+  /* #e9dd8a */
+}
+body {
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary);
+}
+li,
+a {
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  transition: all 0.3s ease;
+}
+.logo {
+  margin: 0px 10px;
+  font-size: 45px;
+  color: #439093;
+}
+.brand {
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.mainScreen {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--secondary);
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.mainScreen .taskBar {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+.mainScreen .taskBar .addNotes {
+  font-size: 16px;
+  padding: 8px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.mainScreen .taskBar .addNotes::after,
+.mainScreen .taskBar .addNotes::before {
+  border: 2px solid black;
+  content: "";
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+}
+.mainScreen .taskBar .addNotes:hover::after {
+  transform: translate(-2px, -2px);
+}
+.mainScreen .taskBar .addNotes:hover::before {
+  transform: translate(2px, 2px);
+}
+.mainScreen .taskBar .addNotes .addIcon {
+  font-size: 20px;
+  margin: 0px 5px;
+  color: #439093;
+}
+.mainScreen .notes_container {
+  margin: auto;
+  margin-top: 10px;
+  width: 70%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.mainScreen .notes_container .note {
+  display: flex;
+  /* border: 2px solid black; */
+}
+.mainScreen .notes_container .note .right_side {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.mainScreen .notes_container .note .right_side p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  color: red;
+}
+.mainScreen .notes_container .note .left_side {
+  border: 1px solid black;
+  display: flex;
+  font-size: 28px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
