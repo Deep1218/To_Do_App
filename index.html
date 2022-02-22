@@ -15,8 +15,30 @@
 
     <section class="mainScreen">
         <div class="taskBar">
-            <button type="button" class="addNotes"><i class="fa-solid fa-square-plus addIcon"></i>Add Note</button>
+            <button type="button" class="addNotes" id="add-btn"><i class="fa-solid fa-square-plus addIcon"></i>Add Item</button>
             <!-- <input type="checkbox" name="" id=""> -->
+        </div>
+        <div class="popup center">
+            <div class="popup-title">
+                <h2>Add Item</h2>
+                <i class="fa-solid fa-xmark" id="close-btn"></i>
+            </div>
+            <div class="myform">
+                <form>
+                    <div class="form-group">
+                        <label for="">Title:</label>
+                        <input type="text" placeholder="Title for the item">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description:</label>
+                        <textarea name="" id=""cols="35" rows="8" placeholder="Description for the item"></textarea>
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-add">Add</button>
+                        <!-- <button type="button" class="btn btn-close">Clear</button> -->
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="notes_container">
             <div class="note">
@@ -34,13 +56,14 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat consectetur omnis vitae quae amet ratione sunt neque labore possimus blanditiis, odit quos deserunt delectus nesciunt, eius perferendis nisi saepe?</p>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </section>
     
     <footer>
         <div class="copyRight"><p></p></div>
     </footer>
+    <script src="addItems.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
