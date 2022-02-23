@@ -42,6 +42,8 @@ const addItem = () => {
   };
   let itemString = JSON.stringify(item);
   localStorage.setItem(localStorage.length + 1, itemString);
+  loadList();
+  return false;
 };
 
 const loadList = () => {
