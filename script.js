@@ -42,6 +42,7 @@ const addItem = () => {
   };
   let itemString = JSON.stringify(item);
   localStorage.setItem(localStorage.length + 1, itemString);
+  closePopup();
   loadList();
   return false;
 };
