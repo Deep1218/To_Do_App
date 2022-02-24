@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTD - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TD - Home</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/6538316857.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <a class="brand" href="#"><i class="fa-brands fa-black-tie logo"></i>Not To Do</a>
+        <a class="brand" href="#"><i class="fa-brands fa-black-tie logo"></i>To Do List</a>
     </header>
 
     <section class="mainScreen">
@@ -25,7 +25,7 @@
                 <i class="fa-solid fa-xmark" id="close-btn"></i>
             </div>
             <div class="myform">
-                <form onsubmit="addItem()"><!--onsubmit="return addItem()"-->
+                <form onsubmit="addItem()">
                     <div class="form-group">
                         <label for="">Date:</label>
                         <input type="date" placeholder="Title for the item" required id="date">
@@ -39,7 +39,7 @@
                         <textarea cols="35" rows="8" placeholder="Description for the item" id="description"></textarea>
                     </div>
                     <div class="btn-group">
-                        <button type="submit" class="btn btn-add" >Add</button><!--onclick="addItem()"-->
+                        <button type="submit" class="btn btn-add" >Add</button>
                     </div>
                 </form>
             </div>
